@@ -562,23 +562,23 @@ chat_with_data/
 
 Version 4 introduces a conversational Text-to-SQL architecture that combines semantic retrieval, database relationships, and conversation-aware SQL generation.
 
- - ChromaDB Vector Database
+ - ChromaDB Vector Database : 
 Stores table embeddings for efficient and persistent semantic retrieval.
- - Persistent Table Embeddings
+ - Persistent Table Embeddings : 
 Generates table embeddings once and stores them for reuse across sessions.
- - Semantic Table Retrieval
+ - Semantic Table Retrieval : 
 Retrieves the most relevant database tables based on the semantic meaning of the user's question.
- - Keyword Boosting
+ - Keyword Boosting : 
 Boosts relevant tables when important keywords from the user's question match table metadata.
- - Relationship-Based Table Expansion
+ - Relationship-Based Table Expansion : 
 Expands the retrieved tables using database relationships and foreign keys to provide the necessary context for SQL generation.
-- Conversation Question Classification
+- Conversation Question Classification : 
 Determines whether the user's question is a new query or a follow-up to the previous conversation.
-- Follow-Up Question Handling
+- Follow-Up Question Handling : 
 Uses conversation context to understand incomplete or context-dependent questions.
-- Previous-SQL-Based Query Modification
+- Previous-SQL-Based Query Modification : 
 Modifies the existing SQL query when appropriate instead of generating a completely new query from scratch.
-- Improved SQL Validation & Safety
+- Improved SQL Validation & Safety : 
 Validates generated SQL and helps prevent invalid, unsafe, or unsupported database operations..
 
 ##  Run the Project
