@@ -1,4 +1,4 @@
-# 💬 Chat with Formula 1 Database
+#  Chat with Formula 1 Database
 
 A Text-to-SQL application that allows users to query a Formula 1 SQLite database using natural language.
 
@@ -8,25 +8,25 @@ The system uses a local LLM to generate and modify SQL queries, semantic table r
 
 ---
 
-## 🚀 What's New in Version 4?
+##  What's New in Version 4?
 
 This is the **fourth iteration** of the project.
 
 The main improvements over the previous versions are:
 
-- 🧠 **ChromaDB vector database** for storing table embeddings.
-- 🔎 **Semantic table retrieval** instead of relying only on the full database schema.
-- 🔑 **Keyword boosting** to improve table retrieval for explicit terms in the question.
-- 🔗 **Automatic table expansion** based on known database relationships.
-- 💬 **Conversation-aware question classification**.
-- 🔄 Support for **follow-up questions** that depend on the previous result.
-- 🛠️ Support for **SQL modification requests** that modify the previous SQL instead of generating a new query from scratch.
-- 🛡️ SQL cleaning, validation, and safety checks before execution.
-- 📋 Conversation history containing the original question, context, SQL, answer, and question type.
+-  **ChromaDB vector database** for storing table embeddings.
+-  **Semantic table retrieval** instead of relying only on the full database schema.
+-  **Keyword boosting** to improve table retrieval for explicit terms in the question.
+-  **Automatic table expansion** based on known database relationships.
+-  **Conversation-aware question classification**.
+-  Support for **follow-up questions** that depend on the previous result.
+-  Support for **SQL modification requests** that modify the previous SQL instead of generating a new query from scratch.
+-  SQL cleaning, validation, and safety checks before execution.
+-  Conversation history containing the original question, context, SQL, answer, and question type.
 
 ---
 
-## 🏗️ System Workflow
+##  System Workflow
 
 ```text
 User Question
@@ -80,7 +80,7 @@ Question Classifier
 
 ---
 
-## 🧩 Main Components
+##  Main Components
 
 ### 1. Streamlit Interface — `app.py`
 
@@ -308,7 +308,7 @@ The ChromaDB database is persisted locally in:
 
 ---
 
-## 🔎 Table Retrieval Process
+##  Table Retrieval Process
 
 When a new question arrives:
 
@@ -369,7 +369,7 @@ The purpose is to make sure the final schema contains the tables required to bui
 
 ---
 
-## 🗄️ ChromaDB Embedding Storage
+##  ChromaDB Embedding Storage
 
 The table embeddings are created from the table catalog and stored persistently.
 
@@ -402,7 +402,7 @@ Semantic Retrieval
 
 ---
 
-## 🧠 Table Catalog
+##  Table Catalog
 
 `table_catalog.py` contains the metadata used to describe the database tables.
 
@@ -418,7 +418,7 @@ This metadata is used to create the documents that are embedded and stored in Ch
 
 ---
 
-## 🛡️ SQL Validation & Safety
+##  SQL Validation & Safety
 
 The system performs several checks before executing generated SQL.
 
@@ -450,7 +450,7 @@ Only read-oriented SQL queries are allowed.
 
 ---
 
-## 🧹 SQL Cleanup
+##  SQL Cleanup
 
 Generated SQL is cleaned before execution.
 
@@ -477,7 +477,7 @@ and replaces them with the correct race-date-based age calculation.
 
 ---
 
-## 💬 Conversation Memory
+##  Conversation Memory
 
 Conversation history is stored in Streamlit session state.
 
@@ -505,7 +505,7 @@ The latest successful SQL becomes the basis for the next SQL modification.
 
 ---
 
-## 🗃️ Database
+##  Database
 
 The project uses a Formula 1 SQLite database containing tables for areas such as:
 
@@ -525,7 +525,7 @@ The system uses known relationships between these tables to construct valid JOIN
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 chat_with_data/
@@ -545,7 +545,7 @@ chat_with_data/
 
 ---
 
-## 🔧 Technologies
+##  Technologies
 
 - **Python**
 - **Streamlit**
@@ -558,19 +558,19 @@ chat_with_data/
 
 ---
 
-## 🔄 Version 4 Architecture
+##  Version 4 Architecture
 
-- ChromaDB vector database.
-- Persistent table embeddings.
-- Semantic table retrieval.
-- Keyword boosting.
-- Relationship-based table expansion.
-- Conversation question classification.
-- Follow-up question handling.
-- Previous-SQL-based query modification.
-- Improved SQL validation and safety.
+ChromaDB Vector Database — Stores table embeddings for efficient semantic retrieval.
+Persistent Table Embeddings — Table embeddings are generated once and persisted for reuse.
+Semantic Table Retrieval — Retrieves the most relevant database tables based on the user's question.
+Keyword Boosting — Improves retrieval by boosting tables containing important keywords from the question.
+Relationship-Based Table Expansion — Expands the retrieved tables using database relationships and foreign keys.
+Conversation Question Classification — Determines whether a question is a new query or a follow-up to the previous conversation.
+Follow-Up Question Handling — Uses conversation context to understand incomplete or context-dependent questions.
+Previous-SQL-Based Query Modification — Modifies the previous SQL query instead of generating a completely new query when appropriate.
+Improved SQL Validation & Safety — Validates generated SQL and restricts unsafe or invalid operations.
 
-## ▶️ Run the Project
+##  Run the Project
 
 Install the required dependencies:
 
@@ -592,7 +592,7 @@ streamlit run app.py
 
 ---
 
-## 🎯 Example Conversation
+##  Example Conversation
 
 ```text
 User:
@@ -620,6 +620,10 @@ then adds the age condition.
 This allows the user to progressively refine a query through natural language.
 
 ---
+## Author
 
+**Karim Kesba**
+
+AI / Machine Learning Developer
 
 
