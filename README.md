@@ -1,5 +1,6 @@
 # Formula 1 Conversation-Aware Text-to-SQL using Large Language Models
 
+
 A Text-to-SQL application that allows users to query a Formula 1 SQLite database using natural language.
 
 The system uses a local LLM to generate and modify SQL queries, semantic table retrieval with embeddings, and a Streamlit interface for interactive querying and conversation history.
